@@ -26,7 +26,7 @@ function aVertailija(f, p, q) {
             return laskin += 1;
         }
     }
-return laskin;
+    return laskin;
 }
 
 console.log(aVertailija(vertaa,a,b)); // pitäisi returnaa 7
