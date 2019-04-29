@@ -1,0 +1,11 @@
+import java.util.function.Supplier; 
+
+class Functional2{
+	
+  public static void main(String[] args){
+		
+    Supplier<Integer> generaattori3 = () -> (int)(Math.random() * 6 + 1);
+		Tulostaja t = new Tulostaja();
+		t.tulosta(generaattori3);
+	}   
+}
