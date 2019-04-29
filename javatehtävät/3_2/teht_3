@@ -1,0 +1,27 @@
+import java.util.Random;
+
+interface Lottery{
+	void printNumbers();
+}
+
+class LotteryStream {
+    public static void main(String[] args){
+    	new Random().ints(7, 1, 41)
+    			.distinct()
+    			.limit(9)
+    			.forEach(System.out::println);
+    	
+    	System.out.println();
+    	
+    	Lottery lottery = new Lottery() {
+    		Random rand = new Random();
+    		public void printNumbers() {
+    			for(int i = 1; i <= 7; i++) {
+        			System.out.println(rand.nextInt((40-1)+1)+1);
+    			}
+    		}
+    	};
+    	
+    	lottery.printNumbers();
+    }   
+}
